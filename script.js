@@ -246,7 +246,7 @@ function updateYearCountdown() {
     );
 
     document.getElementById("yearCountdown").innerHTML =
-        `😬 DAYS LEFT IN 2026: <span class="days-left-red">${daysLeft}</span>`;
+    "BRO JS IS WORKING";
 }
 
 updateYearCountdown();
