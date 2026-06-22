@@ -329,7 +329,7 @@ select {
     color: #a78bfa;
 }
 
-.days-left-red {
+#yearCountdown {
     color: #ff4444;
     font-weight: bold;
 }
