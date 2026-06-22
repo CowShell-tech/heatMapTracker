@@ -235,3 +235,18 @@ for (let day of heatmap.children) {
         day.classList.add("purple");
     }
 }
+
+function updateYearCountdown() {
+    const today = new Date();
+
+    const endOfYear = new Date(2026, 11, 31);
+
+    const daysLeft = Math.ceil(
+        (endOfYear - today) / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("yearCountdown").innerHTML =
+        `😬 DAYS LEFT IN 2026: <span class="days-left-red">${daysLeft}</span>`;
+}
+
+updateYearCountdown();
