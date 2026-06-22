@@ -328,3 +328,8 @@ select {
     font-weight: bold;
     color: #a78bfa;
 }
+
+.days-left-red {
+    color: #ff4444;
+    font-weight: bold;
+}
