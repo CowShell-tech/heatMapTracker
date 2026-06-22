@@ -10,7 +10,7 @@ const foodInput = document.getElementById("foodInput");
 const fitnessInput = document.getElementById("fitnessInput");
 const extraInput = document.getElementById("extraInput");
 const godStreakDisplay = document.getElementById("godStreak");
-const percentLeft = ((daysLeft / 365) * 100).toFixed(1);
+
 let godStreak = 0;
 
 let currentDay = null;
@@ -246,8 +246,9 @@ function updateYearCountdown() {
         (endOfYear - today) / (1000 * 60 * 60 * 24)
     );
 
-    document.getElementById("yearCountdown").innerHTML =
-    `😬 2026 ENDS IN: <span class="days-left-red">${daysLeft}</span> DAYS (${percentLeft}% REMAINING)`;
-}
+    const percentLeft = ((daysLeft / 365) * 100).toFixed(1);
 
+    document.getElementById("yearCountdown").innerHTML =
+        `😬 2026 ENDS IN: <span class="days-left-red">${daysLeft}</span> DAYS (${percentLeft}% REMAINING)`;
+}
 updateYearCountdown();
