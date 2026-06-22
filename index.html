@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoushalOS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        
+            <div class="top-bar">
+
+            <div class="logo-section">
+                <h1>KoushalOS</h1>
+                <p class="quote">"Great things take time."</p>
+            </div>
+
+        </div>
+
+        <div class="heatmap-card">
+
+            <div class="heatmap-header">
+
+                <select>
+                    <option>2026</option>
+                </select>
+
+                <div id="godStreak">
+        🔥 GOD STREAK: 0 DAYS
+    </div>
+
+
+                <div class="legend">
+
+                    <div class="legend-item">
+                        <div class="legend-color red-box"></div>
+                        <span>1-3 = LOW</span>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color yellow-box"></div>
+                        <span>4-6 = MID</span>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color green-box"></div>
+                        <span>7-8 = GOOD</span>
+                    </div>
+
+                    <div class="legend-item">
+                        <div class="legend-color purple-box"></div>
+                        <span>9-10 = GOD</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="heatmap-wrapper">
+
+                <div class="days-labels">
+                    <span>Mon</span>
+                    <span>Wed</span>
+                    <span>Fri</span>
+                </div>
+
+                <div class="heatmap-section">
+
+                    <div class="heatmap" id="heatmap"></div>
+
+                    <div class="months-row">
+
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                        <span>Nov</span>
+                        <span>Dec</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="timezone-note">
+                NOTE: ALL ACTIVITY DATA IS ACCORDING TO INDIAN STANDARD TIME
+            </p>
+
+        </div>
+
+    </div>
+<div class="popup-overlay" id="popupOverlay">
+
+    <div class="popup-card">
+
+        <h2>Daily Activity</h2>
+
+        <input type="number" id="studyInput" placeholder="Study (0-5)" min="0" max="5">
+
+        <input type="number" id="sleepInput" placeholder="Sleep (0-2)" min="0" max="2">
+
+        <input type="number" id="foodInput" placeholder="Food (0-1)" min="0" max="1">
+
+        <input type="number" id="fitnessInput" placeholder="Fitness (0-1)" min="0" max="1">
+
+        <input type="number" id="extraInput" placeholder="Extra/Mood (0-1)" min="0" max="1">
+
+        <div class="popup-buttons">
+
+    <button id="cancelBtn">Cancel</button>
+
+    <button id="saveDayBtn">Save Changes</button>
+
+</div>  
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

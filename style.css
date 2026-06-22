@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    padding: 40px;
+}
+
+.logo-section h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.quote {
+    margin-top: 10px;
+    color: #777;
+    font-size: 18px;
+}
+
+
+.heatmap-card {
+
+    margin-top: 40px;
+
+    background: #1c1c1c;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 35px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 0 1px rgba(255,255,255,0.05),
+        0 20px 50px rgba(0,0,0,0.4);
+
+}
+
+
+
+.heatmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+select {
+    background: #111;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+.red-box {
+    background: #ff4d4d;
+}
+
+.yellow-box {
+    background: #ffd93d;
+}
+
+.green-box {
+    background: #57d163;
+}
+
+.purple-box {
+    background: #a78bfa;
+}
+
+.heatmap-wrapper {
+    display: flex;
+    margin-top: 45px;
+}
+
+.days-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    color: #666;
+    font-size: 18px;
+    padding-top: 12px;
+    margin-right: 18px;
+}
+
+.heatmap-section {
+    width: 100%;
+    overflow-x:auto;
+}
+
+.heatmap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 18px);
+
+    gap: 3px;
+    
+    justify-content: start;
+
+}
+
+.day {
+    width: 13px;
+    height: 14px;
+
+    background: #000000;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.day:hover {
+
+    transform: scale(1.15);
+
+    border: 2px solid white;
+
+}
+.months-row {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    color: #666;
+    font-size: 22px;
+}
+
+.timezone-note {
+    margin-top: 28px;
+    color: #555;
+    font-size: 14px;
+}
+
+.red {
+    background: #ff4d4d;
+}
+
+.yellow {
+    background: #ffd93d;
+}
+
+.green {
+    background: #57d163;
+}
+
+.purple {
+    background: #a78bfa;
+}
+.popup-overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.popup-card {
+
+    width: 350px;
+
+    background: #111;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.popup-card h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.popup-card input {
+
+    background: #1b1b1b;
+
+    border: none;
+
+    outline: none;
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    font-size: 16px;
+}
+
+.popup-card button {
+
+    margin-top: 10px;
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 18px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.popup-buttons{
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+#cancelBtn{
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #2a2a2a;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+#saveDayBtn{
+
+    flex: 1;
+
+}
+
+.tooltip {
+
+    position: absolute;
+
+    display: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    font-size: 14px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    min-width: 220px;
+}
+
+#godStreak{
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #a78bfa;
+}
