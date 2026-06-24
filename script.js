@@ -252,3 +252,35 @@ function updateYearCountdown() {
         `😬 2026 ENDS IN: <span class="days-left-red">${daysLeft}</span> DAYS (${percentLeft}% REMAINING)`;
 }
 updateYearCountdown();
+
+const waveBtn = document.getElementById("waveBtn");
+
+waveBtn.addEventListener("click", () => {
+
+    const days = document.querySelectorAll(".day");
+
+    for(let col = 0; col < 53; col++){
+
+        setTimeout(() => {
+
+            days.forEach((day,index) => {
+
+                const column = Math.floor(index / 7);
+
+                if(column === col){
+
+                    day.classList.add("wave");
+
+                    setTimeout(() => {
+                        day.classList.remove("wave");
+                    },300);
+
+                }
+
+            });
+
+        }, col * 100);
+
+    }
+
+});
