@@ -333,3 +333,19 @@ select {
     color: #ff4444;
     font-weight: bold;
 }
+#waveBtn{
+    background:#222;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    margin-left:20px;
+}
+
+.wave{
+    background:white !important;
+    transform:translateY(-8px);
+    box-shadow:0 0 15px white;
+    transition:all 0.2s ease;
+}
