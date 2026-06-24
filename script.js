@@ -267,19 +267,19 @@ waveBtn.addEventListener("click", () => {
 
                 const column = Math.floor(index / 7);
 
-                if(column === col){
+                if(column >= col && column < col + 5){{
 
                     day.classList.add("wave");
 
                     setTimeout(() => {
                         day.classList.remove("wave");
-                    },300);
+                    },200);
 
                 }
 
             });
 
-        }, col * 100);
+        }, col * 60);
 
     }
 
