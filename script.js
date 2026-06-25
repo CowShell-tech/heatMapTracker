@@ -267,7 +267,7 @@ waveBtn.addEventListener("click", () => {
 
                 const column = Math.floor(index / 7);
 
-                if(column >= col && column < col + 5){{
+                if(column >= col && column < col + 5){
 
                     day.classList.add("wave");
 
