@@ -261,7 +261,7 @@ waveBtn.addEventListener("click", () => {
 
     for(let col = 0; col < 53; col++){
 
-        setTimeout(() => {
+        setTimeout() => {
 
             days.forEach((day,index) => {
 
