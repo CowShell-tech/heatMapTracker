@@ -277,7 +277,7 @@ waveBtn.addEventListener("click", () => {
 
                 }
 
-            });
+            };
 
         }, col * 60);
 
