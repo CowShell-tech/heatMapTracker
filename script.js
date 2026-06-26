@@ -253,34 +253,3 @@ function updateYearCountdown() {
 }
 updateYearCountdown();
 
-const waveBtn = document.getElementById("waveBtn");
-
-waveBtn.addEventListener("click", () => {
-
-    const days = document.querySelectorAll(".day");
-
-    for(let col = 0; col < 53; col++){
-
-        setTimeout(() => {
-
-            days.forEach((day,index) => {
-
-                const column = Math.floor(index / 7);
-
-                if(column >= col && column < col + 5){
-
-                    day.classList.add("wave");
-
-                    setTimeout(() => {
-                        day.classList.remove("wave");
-                    },200);
-
-                }
-
-            });
-
-        }, col * 60);
-
-    }
-
-});
